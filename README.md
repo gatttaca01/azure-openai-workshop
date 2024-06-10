@@ -1,31 +1,44 @@
-# [Preview] Sample Chat App with AOAI
+# Build Chat App with Your Data using Azure OpenAI
 
-This repo contains sample code for a simple chat webapp that integrates with Azure OpenAI. Note: some portions of the app use preview APIs.
+This repo contains sample code and steps for simple chat webapp that integrates with your own data source using Azure OpenAI, Azure AI Search and Azure Cosmos DB. 
 
 ## Prerequisites
-- An existing Azure OpenAI resource and model deployment of a chat model (e.g. `gpt-35-turbo-16k`, `gpt-4`)
-- To use Azure OpenAI on your data: one of the following data sources:
-  - Azure AI Search Index
-  - Azure CosmosDB Mongo vCore vector index
-  - Elasticsearch index (preview)
-  - Pinecone index (preview)
-  - AzureML index (preview)
+- An existing Azure OpenAI resource and model deployment of following models: gpt-4o and text-embedding-ada-002
+- To use Azure OpenAI on your data following data source options will be examined:
+  - Uploaded pdf or text documents
+  - Existing Azure AI Search Index
+  - Product table in a Cosmos DB database
 
-## Deploy the app
+## Step 1: Basic Chat
+Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
 
-### Deploy with Azure Developer CLI
-Please see [README_azd.md](./README_azd.md) for detailed instructions.
+## Step 2: Basic Chat with your own data
+In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
 
-### One click Azure deployment
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fsample-app-aoai-chatGPT%2Fmain%2Finfrastructure%2Fdeployment.json)
+Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
 
-Click on the Deploy to Azure button and configure your settings in the Azure Portal as described in the [Environment variables](#environment-variables) section.
+Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
 
-Please see the [section below](#add-an-identity-provider) for important information about adding authentication to your app.
+Click next and add documents you want your chatbot to use to answer questions. 
 
-### Deploy from your local machine
+Click next and select search type. (Hybrid is recommended for most scenarios). Click next wait until indexing is finished. 
 
-#### Local Setup: Basic Chat Experience
+Chat bot should answer questions regarding data source with citations after indexing finished.
+
+## Step 3: Create a customized index using Azure AI Search 
+Go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
+
+Open .....
+
+
+
+
+
+## [Optional]: Deploy Custom App using VS Code instead of Studio Experience 
+
+GitHub Repo: 
+
+## Local Setup: Basic Chat Experience
 1. Copy `.env.sample` to a new file called `.env` and configure the settings as described in the [Environment variables](#environment-variables) section.
     
     These variables are required:
