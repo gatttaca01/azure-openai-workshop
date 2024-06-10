@@ -3,11 +3,14 @@
 This repo contains sample code and steps for simple chat webapp that integrates with your own data source using Azure OpenAI, Azure AI Search and Azure Cosmos DB. 
 
 ## Prerequisites
-- An existing Azure OpenAI resource and model deployment of following models: gpt-4o and text-embedding-ada-002
+- An existing Azure OpenAI resource and model deployment of following models: **gpt-4o** and **text-embedding-ada-002**
 - To use Azure OpenAI on your data following data source options will be examined:
-  - Uploaded pdf or text documents
-  - Existing Azure AI Search Index
-  - Product table in a Cosmos DB database
+  - Azure Blob Storage: to host uploaded pdf or text documents
+  - Azure AI Search: to create indexes from source documents
+  - Azure Cosmos DB: to serve products data in structured format to chat application
+- Azure App Service: to host chat based custom application (Python / ASP.NET)
+- Azure Cosmos DB: to host conversation history and summary of conversations
+- [Optional] VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
 
 ## Step 1: Basic Chat
 Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
