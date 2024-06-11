@@ -76,7 +76,7 @@ If you can't see any Azure AI Search resource, please create new resource in a r
 
 ![AI Search Resource](/images/image11.png)
 
-Now, open your AI search resource, and select "Import Data" option. You can choose Sample Data option, and then select hotels-sample (Cosmos DB Sample Database including a table with Hotel list, and attributes). If you want you can also select your own data source such as **SQL Database**, **Cosmos DB**, or **Blob Storage**.
+Now, open your AI search resource, and select "Import Data" option. You can choose Sample Data option, and then select hotels-sample (Cosmos DB Sample Database including a table with Hotel list, and attributes). If you want you can also select your own data source such as **Cosmos DB**, **SQL Database**, or **Blob Storage**.
 
 After connecting your data, if you want you can add new cognitive skills. **This is an optional step*
 
@@ -86,8 +86,66 @@ After completion, you should see your indexer in the Indexers list:
 
 ![indexer](/images/image12.png)
 
+Then we go back to [oai.azure.com](https://oai.azure.com). Here we will use and test the index we created. Click "Add your data" and if you have existing data index connection remove it and create new connection. Select the AI Search resource and choose your newly created index.
+
+![AI Search Resource](/images/image13.png)
+
+Then choose search type and click Save & Close.
+
+**Additional Information: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario. *
+
+![AI search Complete](/images/image14.png)
+
+Let's test it. For example, when we ask that "I am going to New York for 3 days, my budget is $300 per night and I need something that sleeps 2 people. I would like to be near the major tourist attractions", it should respond like below:
+
+![Text Chat](/images/image15.png)
 
 
+## [Optional] Step 4: Create Another Index from a table in Cosmos DB
+
+**Create Cosmos DB resource**
+    - if you already exist please pass the other
+    - click Azure Cosmos DB for NoSQL
+    ![Cosmos DB](/images/image16.png)
+ 
+## Step 5: Create Custom Index from Cosmos DB Product Table
+ 
+ 
+## Step 6:  Test indexes in Studio and Prompt Improvements
+ 
+ 
+## Step 7:  Deploy one of indexes as app, with chat history
+
+After testing your index in Studio, click deploy app button on top right and select deploy custom app option.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/270c53a7-aaf5-41cb-8dd6-24edd0d14e29)
+
+Then make selections like below and click deploy.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/2ea0ad86-fb62-418f-bc01-2a653f7cbc2f)
+
+After this, it will take 5-10 minutes until your app is published, with relevant resources in the resource group. 
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/7f0c6cc4-f3f0-4d5e-b0d3-6167fd55805d)
+
+It will automaticaly create one **Cosmos DB* resouce to store conversation history and one web app to host backend and frontend application.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/90427da5-5e76-4b63-802f-1555dc91b799)
+
+Now you can open web app from Azure OpenAI Studio > Launch App button at top right or finding releted Azure Web App in Azure portal and Browse option.
+
+App should look like below and you can test functionality with some questions from your source data.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/3d0bc7f9-8a03-4e22-a979-4947d171ce6e)
+
+
+## Step 8 Edit Environment Variables, System Prompt and Customize App
+
+In previous step, we deployed sample application with one-click deployment but we may need to customize the app interface and functionality. First we will customize deployed app using Environment variables, then we will deploy this app from Visual Studio code using sample reposityory and make desired customizations freely.
+
+**Editing Environment Variables**
+
+Navigate to app service...
 
     These variables are required:
     - `AZURE_OPENAI_RESOURCE`
