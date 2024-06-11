@@ -15,21 +15,28 @@ This repo contains sample code and steps for simple chat webapp that integrates 
 ## Step 1: Basic Chat
 
 Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
-![Azure Open AI Studio](/images/image.png)
-In addition, you can give specific jobs to your Prompt AI, for example, ask a question to the document with the Azure AI Search content in the Github Sample file and learn what AI Search is.
-![deployment](/images/image2.png)
-If your azure open ai studio looks like this, you need to create a new deployment. You can skip this step if not necessary.
-![deployment model](/images/image3.png)
-Fill like that. Choose your own deployment name.
 
+![Azure Open AI Studio](/images/image.png)
+
+**Optional steps if you don't have existing deployment:**
+
+If your azure open ai studio looks like below, you need to create a new deployment. You can skip this step if not necessary.
+
+![deployment](/images/image2.png)
+
+Fill like below. Choose your own deployment name.
+
+![deployment model](/images/image3.png)
 
 ## Step 2: Basic Chat with your own data
 
+In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
 
 ![chat playground](/images/image4.png)
-In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
-![add data button](/images/image5.png)
+
 Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
+
+![add data button](/images/image5.png)
 
 Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
 
