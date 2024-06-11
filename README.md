@@ -75,6 +75,28 @@ Then you can customize target index according to given field and Determine the y
 After complete you can see your indexer in the Indexers: 
 ![indexer](/images/image12.png)
 
+Then we go back to [oai.azure.com](https://oai.azure.com) 
+Here we will use and test the index we created with add your data.
+    - Click Add your data
+        - if you have data index remove and create new
+    -Fill the AI Search resource and choose your new index.
+    ![AI Search Resource](/images/image13.png)
+    -Choose search type and click Save & Close
+    ![AI search Complete](/images/image14.png)
+    -Let's test it. For example, we say that "I am going to New York for 3 days, my budget is $300 per night and I need something that sleeps 2 people. I would like to be near the major tourist attractions"
+    ![Text Chat](/images/image15.png)
+
+## Step 4: Add Your Data to Cosmos DB
+**Create Cosmos DB resource**
+    - if you already exist please pass the other 
+    - click Azure Cosmos DB for Table
+    ![Cosmos DB](/images/image16.png)
+    
+
+
+
+
+
 
 
 
