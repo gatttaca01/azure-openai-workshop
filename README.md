@@ -1,4 +1,4 @@
-# Build Chat App with Your Data using Azure OpenAI
+# Build AI Assistant App (Chat with Your Own Data) Workshop
 
 This repo contains steps for the technical workshop aiming to create generative AI based web app that integrates with your own data source utilizing Azure OpenAI, Azure AI Search and Azure Cosmos DB. 
 
