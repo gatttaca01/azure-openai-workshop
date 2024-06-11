@@ -14,21 +14,24 @@ This repo contains sample code and steps for simple chat webapp that integrates 
 
 ## Step 1: Basic Chat
 
-Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt and parameters to customize responses. A
+Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt and parameters to customize responses.
 
 ![Azure Open AI Studio](/images/image.png)
 
-After testing chatbot with text inputs, try to upload an image and asking question to image. You may test this with sample-image.jpeg in this sample. 
+After testing chatbot with text inputs, try to upload an image and asking question to image. You may test this with sample-image.jpeg in this repository. 
 
 **Optional steps if you don't have existing deployment:**
 
-If your azure open ai studio looks like below, you need to create a new deployment. You can skip this step if not necessary.
+If your Azure OpenAI Studio looks like below, you need to create a new deployment. You can skip this step if not necessary.
 
 ![deployment](/images/image2.png)
 
-Fill like below. Choose your own deployment name.
+Make selections like below and choose your own deployment name (idealy same with model name).
 
 ![deployment model](/images/image3.png)
+
+If you are able to chat with gpt-4o succesfully, you can jump to step 2.
+
 
 ## Step 2: Basic Chat with your own data
 
@@ -36,9 +39,10 @@ In chat interface in playground, open Add Your Own Data tab and click "+ Add Dat
 
 ![chat playground](/images/image4.png)
 
-Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
+Select Subscription, Azure Blob Storage to store .pdf files, and Azure AI Search service to index files.
 
 Choose Upload Files
+
 ![alt text](/images/imageupload.png)
 
 ![add data button](/images/image5.png)
@@ -46,45 +50,41 @@ Choose Upload Files
 Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
 
 ![add data resource](/images/image6.png)
-Click next and add documents you want your chatbot to use to answer questions. 
-you can use sample data from github.
+
+Click next and add documents you want your chatbot to use to answer questions. You can use some of sample documents in sample-data folder of this repository.
 
 ![upload document](/images/image7.png)
 
-Click next and select search type. (Hybrid is recommended for most scenarios). Click next wait until indexing is finished. 
+Click Next and select search type. (Hybrid is recommended for most scenarios). Click next, and then wait until indexing is finished. After completing indexing you should see below:
 
-After completing indexing you can see this:
 ![completed index](/images/image8.png)
 
-Chat bot should answer questions regarding data source with citations after indexing finished.
+Now, chatbot should answer questions regarding data source with citations like below:
 
-It seems like that:
 ![indexes](/images/image9.png)
 
 
+## Step 3: Create a customized index using Azure AI Search
 
-## Step 3: Create a customized index using Azure AI Search 
-Go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
+In step 2, we created our index in Azure OpenAI Studio directly but actualy index is created in Azure AI Search resource at the back stage. In this step, we will create a custom index using Azure AI search interface with more granular control, more data source options and flexibility.
+
+As a first step, go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
+
 ![AI Search Page](/images/image10.png)
 
-if you can't see the Azure AI Search resource:
-please create new resource like that:
+If you can't see any Azure AI Search resource, please create new resource in a resource group. 
+
 ![AI Search Resource](/images/image11.png)
-Choose your Subscription, resource, service name, location and pricing tear and click Review + create
 
-Then you can see the resource in AI Search page.
+Now, open your AI search resource, and select "Import Data" option. You can choose Sample Data option, and then select hotels-sample (Cosmos DB Sample Database including a table with Hotel list, and attributes). If you want you can also select your own data source such as **SQL Database**, **Cosmos DB**, or **Blob Storage**.
 
-Click your AI search resource, then click import data
-you can choose your Existing data source or you can choose hotels-sample from Sample. 
+After connecting your data, if you want you can add new cognitive skills. **This is an optional step*
 
-After connecting your data if you want you can add new cognitive skills.
+Then you can customize target index and override default selection and then determine the your index and indexer name. If you don't want any customization just keep defaults and continue.
 
-Then you can customize target index according to given field and Determine the your index and indexer name.
+After completion, you should see your indexer in the Indexers list: 
 
-After complete you can see your indexer in the Indexers: 
 ![indexer](/images/image12.png)
-
-
 
 
 
