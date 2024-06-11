@@ -13,6 +13,7 @@ This repo contains sample code and steps for simple chat webapp that integrates 
 - [Optional] VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
 
 ## Step 1: Basic Chat
+
 Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
 ![Azure Open AI Studio](/images/image.png)
 In addition, you can give specific jobs to your Prompt AI, for example, ask a question to the document with the Azure AI Search content in the Github Sample file and learn what AI Search is.
@@ -21,7 +22,9 @@ If your azure open ai studio looks like this, you need to create a new deploymen
 ![deployment model](/images/image3.png)
 Fill like that. Choose your own deployment name.
 
+
 ## Step 2: Basic Chat with your own data
+
 
 ![chat playground](/images/image4.png)
 In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
@@ -42,6 +45,7 @@ After completing indexing you can see this:
 ![completed index](/images/image8.png)
 
 Chat bot should answer questions regarding data source with citations after indexing finished.
+=======
 
 
 ## Step 3: Create a customized index using Azure AI Search 
