@@ -144,7 +144,7 @@ You can return back to Azure AI Search and create a new index using Import Data 
 
 After connecting to database next steps are similar to sample data selection in Step 2.
  
-## Step 6:  Test speech capabilities in Azure OpenAI Studio Playground
+## Step 5:  Test speech capabilities in Azure OpenAI Studio Playground
 
 If your chatbot is working as expected with any of created indexes, you can test speech input and speech output capabilities in playground.
 
@@ -158,7 +158,7 @@ Click on one of microphone or speaker icons in chat interface and then select an
 Then you can test input with microphone icon and listen assistant responses as voice in addition to text outputs.
 
 
-## Step 7:  Deploy Assistant as Web App with Chat History
+## [Optional] Step 6:  Deploy Assistant as Web App with Chat History
 
 After testing your index in the studio, click deploy app button on top right and select deploy custom app option. 
 
@@ -187,7 +187,7 @@ App should look like below and you can test functionality with some questions fr
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/3d0bc7f9-8a03-4e22-a979-4947d171ce6e)
 
 
-## Step 8: Edit Environment Variables, System Prompt and Customize App
+## [Optional] Step 7: Edit Environment Variables, System Prompt and Customize App
 
 In previous step, we deployed sample application with one-click deployment but we may need to customize the app interface and functionality. First we will customize deployed app using Environment variables, then we will deploy this app from Visual Studio code using sample reposityory and make desired customizations freely.
 
@@ -208,9 +208,9 @@ You can edit System Prompt or make UI changes using following variables. Then sa
 - `UI_SHOW_SHARE_BUTTON`
 
 
-**Deploying App from Strach using VS Code**
+## [Optional] Step 8: Deploy App from Strach using VS Code
 
-Clone the repository at !(https://github.com/microsoft/sample-app-aoai-chatGPT/tree/main) and follow detailed steps in repository.
+If above steps are completed and you want to have more control on app code, and make futrher customizations you can clone the repository at !(https://github.com/microsoft/sample-app-aoai-chatGPT/tree/main) and follow detailed steps in this repository. This step requires expertise on Python, and you need to have VS Code, Node JS, and Azure CLI in your machine to run and modify app locally.
 
 
 ## CONCULUSION & ADDITIONAL RESOURCES
