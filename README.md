@@ -13,14 +13,40 @@ This repo contains sample code and steps for simple chat webapp that integrates 
 - [Optional] VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
 
 ## Step 1: Basic Chat
-Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses. Upload a photo and ask question regarding image content.
+
+Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
+![Azure Open AI Studio](/images/image.png)
+In addition, you can give specific jobs to your Prompt AI, for example, ask a question to the document with the Azure AI Search content in the Github Sample file and learn what AI Search is.
+![deployment](/images/image2.png)
+If your azure open ai studio looks like this, you need to create a new deployment. You can skip this step if not necessary.
+![deployment model](/images/image3.png)
+Fill like that. Choose your own deployment name.
+
 
 ## Step 2: Basic Chat with your own data
+
+
+![chat playground](/images/image4.png)
 In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
+![add data button](/images/image5.png)
+Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
 
-Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files. Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
+Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
 
-Click next and add documents you want your chatbot to use to answer questions. Click next and select search type. (Hybrid is recommended for most scenarios). Click next wait until indexing is finished. Chat bot should answer questions regarding data source with citations after indexing finished.
+![add data resource](/images/image6.png)
+Click next and add documents you want your chatbot to use to answer questions. 
+you can use sample data from github.
+
+![upload document](/images/image7.png)
+
+Click next and select search type. (Hybrid is recommended for most scenarios). Click next wait until indexing is finished. 
+
+After completing indexing you can see this:
+![completed index](/images/image8.png)
+
+Chat bot should answer questions regarding data source with citations after indexing finished.
+=======
+
 
 ## Step 3: Create a customized index using Azure AI Search 
 Go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
