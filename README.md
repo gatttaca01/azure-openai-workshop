@@ -12,11 +12,13 @@ This repo contains steps for the technical workshop aiming to create generative 
 - **Azure Cosmos DB**: to host conversation history and summary of conversations
 - [Optional] VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
 
+
 ## Step 1: Basic Chat
 
 Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt and parameters to customize responses.
 
 > ![Azure Open AI Studio](/images/image.png)
+
 
 **Optional steps if you don't have existing deployment:**
 
@@ -24,9 +26,11 @@ If your Azure OpenAI Studio looks like below, you need to create a new deploymen
 
 > ![deployment](/images/image2.png)
 
-Make selections like below and choose your own deployment name (idealy same with model name).
 
-> ![deployment model](/images/image3.png)
+Make selections like below and select a deployment name (idealy same with model name).
+
+> <img src="/images/image3.png" width="400" />
+
 
 If you are able to chat with gpt-4o succesfully, try to upload an image and asking question to image. You may test this with any sample.jpg in this repository or any image.
 
@@ -37,7 +41,8 @@ If you are able to chat with gpt-4o succesfully, try to upload an image and aski
 
 In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
 
-> ![add data button](/images/image5.png)
+
+> <img src="/images/image5.png" width="400" />
 
 > ![alt text](/images/imageupload.png)
 
@@ -56,12 +61,12 @@ Click next and add documents you want your chatbot to use to answer questions. Y
 
 Click Next and select search type. (Hybrid is recommended for most scenarios). Click next, and then wait until indexing is finished. After completing indexing you should see below:
 
-![completed index](/images/image8.png)
+> <img src="/images/image8.png" width="400" />
 
 
 Now, chatbot should answer questions regarding data source with citations like below:
 
-![indexes](/images/image9.png)
+> ![indexes](/images/image9.png)
 
 
 ## Step 3: Create a customized index using Azure AI Search
@@ -72,21 +77,22 @@ As a first step, go to [portal.azure.com](https://portal.azure.com) and search f
 
 > ![AI Search Page](/images/image10.png)
 
+
 If you can't see any Azure AI Search resource, please create new resource in a resource group. 
 
+> <img src="/images/image11.png" width="400" />
 
-> ![AI Search Resource](/images/image11.png)
 
 Now, open your AI search resource, and select "Import Data" option. You can choose Sample Data option, and then select hotels-sample (Cosmos DB Sample Database including a table with Hotel list, and attributes). If you want you can also select your own data source such as **Cosmos DB**, **SQL Database**, or **Blob Storage**.
 
-After connecting your data, if you want you can add new cognitive skills. **This is an optional step*
+[Optional] After connecting your data, if you want you can add new cognitive skills. 
 
-Then you can customize target index and override default selection and then determine the your index and indexer name. If you don't want any customization just keep defaults and continue.
+You can customize target index and override default selection and then determine the your index and indexer name. If you don't want any customization just keep defaults and continue.
 
 After completion, you should see your indexer in the Indexers list: 
 
-> ![indexer](/images/image12.png)
 
+> ![indexer](/images/image12.png)
 
 Then we go back to [oai.azure.com](https://oai.azure.com). Here we will use and test the index we created. Click "Add your data" and if you have existing data index connection remove it and create new connection. Select the AI Search resource and choose your newly created index.
 
