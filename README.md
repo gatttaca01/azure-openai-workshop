@@ -69,6 +69,7 @@ Now, chatbot should answer questions regarding data source with citations like b
 > ![indexes](/images/image9.png)
 
 
+
 ## Step 3: Create a customized index using Azure AI Search
 
 In step 2, we created our index in Azure OpenAI Studio directly but actualy index is created in Azure AI Search resource at the back stage. In this step, we will create a custom index using Azure AI search interface with more granular control, more data source options and flexibility.
@@ -108,6 +109,7 @@ If your index seems filled with source items properly, you can go back [oai.azur
 
 Click Next to follow wizard and then save & close.
 
+
 ***Additional Information**: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario.*
 
 You should see your index name in setup section of chat playground as below.
@@ -143,6 +145,8 @@ You can check generated data by browsing container items like below. It should i
 You can return back to Azure AI Search and create a new index using Import Data wizard by seleting Cosmos DB data source. 
 
 After connecting to database next steps are similar to sample data selection in Step 2.
+
+
  
 ## Step 5:  Test speech capabilities in Azure OpenAI Studio Playground
 
@@ -156,6 +160,7 @@ Click on one of microphone or speaker icons in chat interface and then select an
 
 
 Then you can test input with microphone icon and listen assistant responses as voice in addition to text outputs.
+
 
 
 ## [Optional] Step 6:  Deploy Assistant as Web App with Chat History
@@ -187,6 +192,7 @@ App should look like below and you can test functionality with some questions fr
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/3d0bc7f9-8a03-4e22-a979-4947d171ce6e)
 
 
+
 ## [Optional] Step 7: Edit Environment Variables, System Prompt and Customize App
 
 In previous step, we deployed sample application with one-click deployment but we may need to customize the app interface and functionality. First we will customize deployed app using Environment variables, then we will deploy this app from Visual Studio code using sample reposityory and make desired customizations freely.
@@ -208,9 +214,11 @@ You can edit System Prompt or make UI changes using following variables. Then sa
 - `UI_SHOW_SHARE_BUTTON`
 
 
+
 ## [Optional] Step 8: Deploy App from Strach using VS Code
 
 If above steps are completed and you want to have more control on app code, and make futrher customizations you can clone the repository at !(https://github.com/microsoft/sample-app-aoai-chatGPT/tree/main) and follow detailed steps in this repository. This step requires expertise on Python, and you need to have VS Code, Node JS, and Azure CLI in your machine to run and modify app locally.
+
 
 
 ## CONCULUSION & ADDITIONAL RESOURCES
@@ -226,10 +234,4 @@ You can learn more and discover additonal scenarios using below resources.
 - https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/vector-search
   
 
-## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
