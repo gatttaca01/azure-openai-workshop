@@ -139,7 +139,7 @@ App should look like below and you can test functionality with some questions fr
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/3d0bc7f9-8a03-4e22-a979-4947d171ce6e)
 
 
-## Step 8 Edit Environment Variables, System Prompt and Customize App
+## Step 8: Edit Environment Variables, System Prompt and Customize App
 
 In previous step, we deployed sample application with one-click deployment but we may need to customize the app interface and functionality. First we will customize deployed app using Environment variables, then we will deploy this app from Visual Studio code using sample reposityory and make desired customizations freely.
 
