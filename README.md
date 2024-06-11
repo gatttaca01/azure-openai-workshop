@@ -89,23 +89,31 @@ Now, open your AI search resource, and select "Import Data" option. You can choo
 
 You can customize target index and override default selection and then determine the your index and indexer name. If you don't want any customization just keep defaults and continue.
 
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/94b84c0f-51f9-4610-b853-a894656e6df7)
+
+
 After completion, you should see your indexer in the Indexers list: 
 
 
 > ![indexer](/images/image12.png)
 
-Then we go back to [oai.azure.com](https://oai.azure.com). Here we will use and test the index we created. Click "Add your data" and if you have existing data index connection remove it and create new connection. Select the AI Search resource and choose your newly created index.
+Then you can open search explorer and search for * to see all items indexed.
+
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/3738c544-acf6-471d-92d6-f40a166c57ba)
+
+If your index seems filled with source items properly, you can go back [oai.azure.com](https://oai.azure.com). Here you will use and test the index we created. Click "Add your data" and if you have existing data index connection remove it and create new connection. Select the AI Search resource and choose your newly created index.
 
 > ![AI Search Resource](/images/image13.png)
 
 
 Click Next to follow wizard and then save & close.
 
-*Additional Information: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario.*
+***Additional Information**: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario.*
 
 You should see your index name in setup section of chat playground as below.
 
 > <img src="/images/image14.png" width="400" />
+
 
 
 Now you can test it. For example, when we ask that "I am going to New York for 3 days, my budget is $300 per night and I need something that sleeps 2 people. I would like to be near the major tourist attractions", it should respond like below:
@@ -116,22 +124,45 @@ Now you can test it. For example, when we ask that "I am going to New York for 3
 
 ## [Optional] Step 4: Create Another Index from a table in Cosmos DB
 
-As a first step, if you don't have existing Cosmos DB, create a **Cosmos DB** resource in Azure Portal by selecting Azure Cosmos DB for NoSQL
+If you don't have existing Cosmos DB, create a **Cosmos DB** resource in Azure Portal by selecting Azure Cosmos DB for NoSQL.
 
-> <img src="/images/image16.png" width="400" />
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/82bdc2d7-4c7d-429b-8dff-7b0820ffe2bc)
 
- 
-## Step 5: Create Custom Index from Cosmos DB Product Table
- 
+Then make selections like below and wait until database is ready.
 
- 
-## Step 6:  Test indexes in Studio and Prompt Improvements
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/5cd0213f-93e7-41ed-bcea-5a398d60cc2b)
 
+After deployment is completed, open data explorer and create sample container with sample data using wizard.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/5887a475-a4bd-4cec-839e-74441b862b09)
+
+You can check generated data by browsing container items like below. It should include tens of different products with many attributes.
+
+![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/5874a923-6dff-4ed7-beee-7d5ab5702408)
  
+You can return back to Azure AI Search and create a new index using Import Data wizard by seleting Cosmos DB data source. 
+
+After connecting to database next steps are similar to sample data selection in Step 2.
  
+## Step 6:  Test speech capabilities in Azure OpenAI Studio Playground
+
+If your chatbot is working as expected with any of created indexes, you can test speech input and speech output capabilities in playground.
+
+Click on one of microphone or speaker icons in chat interface and then select an Azure Speech Resource.
+
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/bbed7e64-dde8-4da5-91fd-f8d5d863ef0f)
+
+> ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/a7d8f119-70c8-4122-a706-9856e48a2cbc)
+
+
+Then you can test input with microphone icon and listen assistant responses as voice in addition to text outputs.
+
+
 ## Step 7:  Deploy Assistant as Web App with Chat History
 
-After testing your index in Studio, click deploy app button on top right and select deploy custom app option.
+After testing your index in the studio, click deploy app button on top right and select deploy custom app option. 
+
+*Note: This step requires you to be at least contributer in the resource group. Alternatively you can skip this step and manually deploy and test this app locally in your computer. This second option requires more technical steps and requirements. Details are given in Step 8.*
 
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/270c53a7-aaf5-41cb-8dd6-24edd0d14e29)
 
@@ -181,19 +212,19 @@ You can edit System Prompt or make UI changes using following variables. Then sa
 
 Clone the repository at !(https://github.com/microsoft/sample-app-aoai-chatGPT/tree/main) and follow detailed steps in repository.
 
-## CONGRAGULATIONS!!
 
-This is end of all steps required for this workshop. Learn more and discover additonal scenarios using below resources.
+## CONCULUSION & ADDITIONAL RESOURCES
+
+This is end of all steps required for this workshop. Congragulations for completion!
+
+You can learn more and discover additonal scenarios using below resources.
 
 - https://github.com/microsoft/sample-app-aoai-chatGPT
 - https://github.com/Azure-Samples/azure-openai-gpt-4-vision-pdf-extraction-sample
 - https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator
 - https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore
--
--
--
--
-
+- https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/vector-search
+  
 
 ## Trademarks
 
