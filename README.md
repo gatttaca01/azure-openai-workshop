@@ -99,29 +99,34 @@ Then we go back to [oai.azure.com](https://oai.azure.com). Here we will use and 
 > ![AI Search Resource](/images/image13.png)
 
 
-Then choose search type and click Save & Close.
+Click Next to follow wizard and then save & close.
 
-**Additional Information: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario. *
+*Additional Information: In above step, there is no hybrid search option since we are connecting to an index without Vector search capability. If vector search capability is needed, then we sould use other options in Azure AI Search, including vectorization in Cosmos DB itself. You can visit https://github.com/Azure/Vector-Search-AI-Assistant-MongoDBvCore to learn more about this scenario.*
 
-> ![AI search Complete](/images/image14.png)
+You should see your index name in setup section of chat playground as below.
+
+> <img src="/images/image14.png" width="400" />
 
 
-Let's test it. For example, when we ask that "I am going to New York for 3 days, my budget is $300 per night and I need something that sleeps 2 people. I would like to be near the major tourist attractions", it should respond like below:
+Now you can test it. For example, when we ask that "I am going to New York for 3 days, my budget is $300 per night and I need something that sleeps 2 people. I would like to be near the major tourist attractions", it should respond like below:
 
 > ![Text Chat](/images/image15.png)
 
 
+
 ## [Optional] Step 4: Create Another Index from a table in Cosmos DB
 
-**Create Cosmos DB resource**
-    - if you already exist please pass the other
-    - click Azure Cosmos DB for NoSQL
-    ![Cosmos DB](/images/image16.png)
+As a first step, if you don't have existing Cosmos DB, create a **Cosmos DB** resource in Azure Portal by selecting Azure Cosmos DB for NoSQL
+
+> <img src="/images/image16.png" width="400" />
+
  
 ## Step 5: Create Custom Index from Cosmos DB Product Table
  
+
  
 ## Step 6:  Test indexes in Studio and Prompt Improvements
+
  
  
 ## Step 7:  Deploy Assistant as Web App with Chat History
