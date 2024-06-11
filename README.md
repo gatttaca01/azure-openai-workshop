@@ -14,7 +14,7 @@ This repo contains sample code and steps for simple chat webapp that integrates 
 
 ## Step 1: Basic Chat
 
-Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
+Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt and parameters to customize responses. Also try to upload an image and asking question to image using attachment icon. 
 
 ![Azure Open AI Studio](/images/image.png)
 
