@@ -3,35 +3,44 @@
 This repo contains sample code and steps for simple chat webapp that integrates with your own data source using Azure OpenAI, Azure AI Search and Azure Cosmos DB. 
 
 ## Prerequisites
-- An existing Azure OpenAI resource and model deployment of following models: **gpt-4o** and **text-embedding-ada-002**
+- An existing **Azure OpenAI** resource and model deployment of following models: **gpt-4o** and **text-embedding-ada-002**
 - To use Azure OpenAI on your data following data source options will be examined:
-  - Azure Blob Storage: to host uploaded pdf or text documents
-  - Azure AI Search: to create indexes from source documents
-  - Azure Cosmos DB: to serve products data in structured format to chat application
-- Azure App Service: to host chat based custom application (Python / ASP.NET)
-- Azure Cosmos DB: to host conversation history and summary of conversations
-- [Optional] VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
+  - **Azure Blob Storage**: to host uploaded pdf or text documents
+  - **Azure AI Search**: to create indexes from source documents
+  - **Azure Cosmos DB**: to serve products data in structured format to chat application
+- **Azure App Service**: to host chat based custom application (Python / ASP.NET)
+- **Azure Cosmos DB**: to host conversation history and summary of conversations
+- **[Optional]** VS Code, Python, Node JS, and Azure CLI to modify / run the app locally
 
 ## Step 1: Basic Chat
 
-Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt to customize responses.
-![Azure Open AI Studio](/images/image.png)
-In addition, you can give specific jobs to your Prompt AI, for example, ask a question to the document with the Azure AI Search content in the Github Sample file and learn what AI Search is.
-![deployment](/images/image2.png)
-If your azure open ai studio looks like this, you need to create a new deployment. You can skip this step if not necessary.
-![deployment model](/images/image3.png)
-Fill like that. Choose your own deployment name.
+Go to [oai.azure.com](https://oai.azure.com) and  navigate to chat under playground. Test basic chat with gpt-4o and play with prompt and parameters to customize responses. Also try to upload an image and asking question to image using attachment icon. 
 
+![Azure Open AI Studio](/images/image.png)
+
+**Optional steps if you don't have existing deployment:**
+
+If your azure open ai studio looks like below, you need to create a new deployment. You can skip this step if not necessary.
+
+![deployment](/images/image2.png)
+
+Fill like below. Choose your own deployment name.
+
+![deployment model](/images/image3.png)
 
 ## Step 2: Basic Chat with your own data
 
+In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
 
 ![chat playground](/images/image4.png)
-In chat interface in playground, open Add Your Own Data tab and click "+ Add Data Source" button. 
-![add data button](/images/image5.png)
+
 Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
+
 Choose Upload Files
 ![alt text](/images/imageupload.png)
+
+![add data button](/images/image5.png)
+
 Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
 
 ![add data resource](/images/image6.png)
@@ -46,13 +55,11 @@ After completing indexing you can see this:
 ![completed index](/images/image8.png)
 
 Chat bot should answer questions regarding data source with citations after indexing finished.
-<<<<<<< HEAD
+
 It seems like that:
 ![indexes](/images/image9.png)
-=======
-=======
 
->>>>>>> 8d35514a554c339ad68dae1f4966e5f63c6b3dab
+
 
 ## Step 3: Create a customized index using Azure AI Search 
 Go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
