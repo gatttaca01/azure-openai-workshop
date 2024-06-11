@@ -36,6 +36,9 @@ In chat interface in playground, open Add Your Own Data tab and click "+ Add Dat
 
 Select Subscription, blob storage to store pdf files, and Azure AI Search service to index files.
 
+Choose Upload Files
+![alt text](/images/imageupload.png)
+
 ![add data button](/images/image5.png)
 
 Give an Index name, check add vector search box and then select available text-embedding-ada-002 model from dropdown.
@@ -52,25 +55,38 @@ After completing indexing you can see this:
 ![completed index](/images/image8.png)
 
 Chat bot should answer questions regarding data source with citations after indexing finished.
-=======
+
+It seems like that:
+![indexes](/images/image9.png)
+
 
 
 ## Step 3: Create a customized index using Azure AI Search 
 Go to [portal.azure.com](https://portal.azure.com) and search for "Azure AI Search" resources. Use existing or create new resource.
+![AI Search Page](/images/image10.png)
 
-Open .....
+if you can't see the Azure AI Search resource:
+please create new resource like that:
+![AI Search Resource](/images/image11.png)
+Choose your Subscription, resource, service name, location and pricing tear and click Review + create
+
+Then you can see the resource in AI Search page.
+
+Click your AI search resource, then click import data
+you can choose your Existing data source or you can choose hotels-sample from Sample. 
+
+After connecting your data if you want you can add new cognitive skills.
+
+Then you can customize target index according to given field and Determine the your index and indexer name.
+
+After complete you can see your indexer in the Indexers: 
+![indexer](/images/image12.png)
 
 
 
 
 
-## [Optional]: Deploy Custom App using VS Code instead of Studio Experience 
 
-GitHub Repo: 
-
-## Local Setup: Basic Chat Experience
-1. Copy `.env.sample` to a new file called `.env` and configure the settings as described in the [Environment variables](#environment-variables) section.
-    
     These variables are required:
     - `AZURE_OPENAI_RESOURCE`
     - `AZURE_OPENAI_MODEL`
