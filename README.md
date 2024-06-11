@@ -203,7 +203,7 @@ Navigate to app service from Azure Portal and open Environment Variables of the 
 
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/df639bb0-8405-4071-92ee-3a5fc348cf3d)
 
-You can edit System Prompt or make UI changes using following variables. Then save and test app to see changes. List of all available variables are listed at !(https://github.com/microsoft/sample-app-aoai-chatGPT)
+You can edit System Prompt or make UI changes using following variables. Then save and test app to see changes. List of all available variables are listed at https://github.com/microsoft/sample-app-aoai-chatGPT
 
 - `UI_TITLE`
 - `UI_LOGO`
@@ -217,7 +217,7 @@ You can edit System Prompt or make UI changes using following variables. Then sa
 
 ## [Optional] Step 8: Deploy App from Strach using VS Code
 
-If above steps are completed and you want to have more control on app code, and make futrher customizations you can clone the repository at !(https://github.com/microsoft/sample-app-aoai-chatGPT/tree/main) and follow detailed steps in this repository. This step requires expertise on Python, and you need to have VS Code, Node JS, and Azure CLI in your machine to run and modify app locally.
+If above steps are completed and you want to have more control on app code, and make futrher customizations you can clone the repository at https://github.com/microsoft/sample-app-aoai-chatGPT/ and follow detailed steps in this repository. This step requires expertise on Python, and you need to have VS Code, Node JS, and Azure CLI in your machine to run and modify app locally.
 
 
 
