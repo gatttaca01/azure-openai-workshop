@@ -134,7 +134,7 @@ Then make selections like below and wait until database is ready.
 
 > ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/5cd0213f-93e7-41ed-bcea-5a398d60cc2b)
 
-After deployment is completed, open data explorer and create sample container with sample data using wizard.
+After deployment is completed, open data explorer, click quick start and follow the wizard step and create container.
 
 ![image](https://github.com/mustafaasiroglu/azure-openai-workshop/assets/38222743/5887a475-a4bd-4cec-839e-74441b862b09)
 
